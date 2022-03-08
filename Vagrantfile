@@ -162,7 +162,7 @@ Vagrant.configure("2") do |config|
         end
       end
 
-      if $kube_node_instances_with_disks
+      if $kube_node_instances_with_disks && i > $kube_master_instances
         # Libvirt
         driverletters = ('a'..'z').to_a
         node.vm.provider :libvirt do |lv|
