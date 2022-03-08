@@ -256,7 +256,7 @@ Vagrant.configure("2") do |config|
           ansible.groups = {
             "etcd" => ["#{$instance_name_prefix}-[1:#{$etcd_instances}]"],
             "kube_control_plane" => ["#{$instance_name_prefix}-[1:#{$kube_master_instances}]"],
-            "kube_node" => ["#{$instance_name_prefix}-[1:#{$kube_node_instances}]"],
+            "kube_node" => ["#{$instance_name_prefix}-[#{$kube_master_instances + 1}:#{$num_instances}]"],
             "k8s_cluster:children" => ["kube_control_plane", "kube_node"],
           }
         end
