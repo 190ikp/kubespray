@@ -18,6 +18,7 @@
   * [Weave](docs/weave.md)
   * [Multus](docs/multus.md)
 * Ingress
+  * [kube-vip](docs/kube-vip.md)
   * [ALB Ingress](docs/ingress_controller/alb_ingress_controller.md)
   * [MetalLB](docs/metallb.md)
   * [Nginx Ingress](docs/ingress_controller/ingress_nginx.md)
@@ -33,10 +34,11 @@
   * [Fedora CoreOS](docs/fcos.md)
   * [OpenSUSE](docs/opensuse.md)
   * [RedHat Enterprise Linux](docs/rhel.md)
-  * [CentOS/OracleLinux/AlmaLinux/Rocky Linux](docs/centos8.md)
+  * [CentOS/OracleLinux/AlmaLinux/Rocky Linux](docs/centos.md)
   * [Amazon Linux 2](docs/amazonlinux.md)
 * CRI
   * [Containerd](docs/containerd.md)
+  * [Docker](docs/docker.md)
   * [CRI-O](docs/cri-o.md)
   * [Kata Containers](docs/kata-containers.md)
   * [gVisor](docs/gvisor.md)

@@ -137,6 +137,12 @@ variable "network_name" {
   default     = "internal"
 }
 
+variable "use_existing_network" {
+  description = "Use an existing network"
+  type        = bool
+  default     = "false"
+}
+
 variable "network_dns_domain" {
   description = "dns_domain for the internal network"
   type        = string
@@ -146,6 +152,18 @@ variable "network_dns_domain" {
 variable "use_neutron" {
   description = "Use neutron"
   default     = 1
+}
+
+variable "port_security_enabled" {
+  description = "Enable port security on the internal network"
+  type        = bool
+  default     = "true"
+}
+
+variable "force_null_port_security" {
+  description = "Force port security to be null. Some providers does not allow setting port security"
+  type        = bool
+  default     = "false"
 }
 
 variable "subnet_cidr" {
@@ -266,6 +284,10 @@ variable "router_id" {
 variable "router_internal_port_id" {
   description = "uuid of the port connection our router to our network"
   default     = null
+}
+
+variable "k8s_masters" {
+  default = {}
 }
 
 variable "k8s_nodes" {
