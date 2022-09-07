@@ -19,7 +19,7 @@ contrib/terraform/aws/credentials.tfvars
 /ssh-bastion.conf
 **/*.sw[pon]
 *~
-vagrant/
+!vagrant/
 plugins/mitogen
 
 # Ansible inventory
