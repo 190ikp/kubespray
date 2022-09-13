@@ -264,7 +264,7 @@ Vagrant.configure("2") do |config|
           ansible.become = true
           ansible.limit = "all,localhost"
           ansible.host_key_checking = false
-          ansible.raw_arguments = ["--forks=#{$num_instances}", "--flush-cache", "-e ansible_become_pass=vagrant"]
+          ansible.raw_arguments = ["--forks=#{$num_instances}", "--flush-cache", "-e ansible_become_pass=vagrant", "-e kube_version=v1.21.6"]
           ansible.host_vars = host_vars
           if $ansible_tags != ""
             ansible.tags = [$ansible_tags]
